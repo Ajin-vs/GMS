@@ -1,0 +1,3 @@
+Primary Color: #1a73e8 (light blue)
+Accent Color: #174ea6 (dark blue)
+Background: ##fff (white)

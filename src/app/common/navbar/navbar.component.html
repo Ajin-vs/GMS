@@ -1,0 +1,17 @@
+<div class="side-bar shadow col-md-3 col-lg-2 ">
+    <div *ngFor="let item of items" class="mt-3 mb-4 menu">
+    <div (click)="toggleCollapse(item.label)" class="menu-hover" [ngClass]="{'menu-selected': item.label === selectedItem}">
+      <i class="fa {{item.icon}} fa-lg ms-2"></i>
+      <span *ngIf="item?.items?.length > 0 " class="ms-3">{{item.label}}</span>
+      <span *ngIf="item?.items?.length == 0 " class="ms-3" (click)="subMenuSelected(item)"  [routerLink]="[item.path]">{{item.label}}</span>
+      <span *ngIf="item?.items?.length > 0" class="pi float-end mt-1 me-3"
+        [ngClass]="{'pi-chevron-right': item.label !== currentItem, 'pi-chevron-up': item.label === currentItem}">
+      </span>
+    </div>
+    <div *ngIf="item?.items?.length > 0" [@collapseExpand]="isCollapse(item.label) ? 'collapses' : 'shows'" class="m-3">
+      <div *ngFor="let subItem of item.items" class="ps-2 pt-2 pb-2 mt-2 sub-menu-hover" routerLinkActive="sub-menu-selected" [routerLink]="[subItem.path]" (click)="subMenuSelected(item)">
+        <span class="ms-3">{{subItem.label}}</span>
+      </div>
+    </div>
+  </div>
+</div>

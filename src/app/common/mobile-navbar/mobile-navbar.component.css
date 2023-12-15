@@ -1,0 +1,13 @@
+.side-bar{
+    background-color: #1a73e8;
+    color: #fff;
+}
+
+.icon-style{
+    /* border-radius: 100%; */
+    border: 1px solid black;
+}
+
+.custom-icon {
+    font-size: 30px; /* Adjust the size to your preference */
+  }

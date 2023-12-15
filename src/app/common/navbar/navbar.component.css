@@ -1,0 +1,60 @@
+.side-bar{
+    background-color: #1a73e8;
+    color: #fff;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed; /* Fixed position to keep the sidebar in place */
+    scrollbar-width: thin;
+    /* margin-top: 40px; */
+    /* margin-left: -11px; */
+}
+.menu {
+    cursor: pointer;
+}
+
+.menu-hover:hover {
+    color: #cccccc;
+}
+
+.menu-selected {
+    color: #cccccc;
+}
+
+.sub-menu-hover {
+    transition: background-color 0.3s linear, color 0.3s linear, border-radius 0.3s linear;
+}
+
+.sub-menu-hover:hover {
+    background-color: white;
+    color: #1a73e8;
+    border-radius: 10px 0px 0px 10px;
+    width: 100vmax;
+}
+
+.sub-menu-selected {
+    background-color: white;
+    color: #1a73e8;
+    border-radius: 10px 0px 0px 10px;
+    width: 100vmax;
+}
+
+.collapses {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    display: none;
+  }
+  
+  .shows {
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+    display: block;
+
+  }
+
+.collapsing {
+    transition: height 0.35s ease !important; /* Add transition for the collapse effect */
+ 
+}
+  

@@ -1,0 +1,14 @@
+<app-topbar></app-topbar>
+<div class="row" *ngIf="ismobileView" style="--bs-gutter-x: 0rem;">
+    <div class=" col-md-3 col-lg-2">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="col-md-9 col-lg-10 ">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<div *ngIf="!ismobileView" class="container">
+    <router-outlet></router-outlet>
+    <app-mobile-navbar *ngIf="!ismobileView"></app-mobile-navbar>
+</div>
