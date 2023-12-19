@@ -1,0 +1,25 @@
+.header {
+    height: 79px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: dark;
+    /* Adjust the text color as needed */
+    z-index: 1000;
+    /* background-color: red; */
+    border: 1px solid black;
+}
+
+.body-content {
+    margin-top: 79px;
+    margin-bottom: 100px;
+    padding-bottom: 89px;
+    /* Add other styles for body container if needed */
+    /* Set body container height to 100% of the viewport height */
+
+}
+
+/* .body-container{
+    margin-top: 48px;
+
+} */

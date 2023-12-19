@@ -1,0 +1,9 @@
+::ng-deep .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label, .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+    color: #1a73e8 !important; 
+}
+/* .sub-menu{
+    position: fixed;
+    top: 80px;
+    z-index: 1000;
+    display: block;
+} */

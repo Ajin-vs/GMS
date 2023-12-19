@@ -33,21 +33,28 @@ import { Router, NavigationStart, Event as NavigationEvent } from '@angular/rout
 })
 export class NavbarComponent {
   items: any[] = [];
-  currentItem = 'Dashboard';
+  currentItem = '';
   event$
-  selectedItem ='Dashboard';
+  selectedItem = '';
   constructor(private router: Router) {
+    const split = this.router.url.split('/')[1];
+    this.currentItem = split.charAt(0).toUpperCase() + split.slice(1) ? split.charAt(0).toUpperCase() + split.slice(1) : 'Dashboard';
+    this.selectedItem = split.charAt(0).toUpperCase() + split.slice(1) ? split.charAt(0).toUpperCase() + split.slice(1) : 'Dashboard';
+    if (this.router.url.includes('dashboard')) {
+      this.currentItem = 'Dashboard'
+      this.selectedItem = 'Dashboard'
+    }
     this.event$
       = this.router.events
         .subscribe(
           (event: NavigationEvent) => {
             if (event instanceof NavigationStart) {
-              console.log(event.url);
+              // console.log(event.url);
               const split = event.url.split('/')[1];
-              
-              this.currentItem = split.charAt(0).toUpperCase() + split.slice(1) ? split.charAt(0).toUpperCase() + split.slice(1) : 'Dashboard';              
+
+              this.currentItem = split.charAt(0).toUpperCase() + split.slice(1) ? split.charAt(0).toUpperCase() + split.slice(1) : 'Dashboard';
               this.selectedItem = split.charAt(0).toUpperCase() + split.slice(1) ? split.charAt(0).toUpperCase() + split.slice(1) : 'Dashboard';
-              if(event.url.includes('dashboard')){
+              if (event.url.includes('dashboard')) {
                 this.currentItem = 'Dashboard'
                 this.selectedItem = 'Dashboard'
               }
@@ -59,7 +66,7 @@ export class NavbarComponent {
       {
         label: 'Dashboard',
         icon: 'fa-gauge',
-        path:'dashboard',
+        path: 'dashboard',
         items: []
       },
       {
@@ -69,12 +76,12 @@ export class NavbarComponent {
           {
             label: 'Member List',
             icon: 'pi pi-fw pi-bookmark',
-            path: 'student/studentList'
+            path: 'member/memberList'
           },
           {
             label: 'Member Enrollment',
             icon: 'pi pi-fw pi-video',
-            path: 'student/studentEnrollment'
+            path: 'member/memberAdd'
           }
         ]
       },
@@ -116,7 +123,7 @@ export class NavbarComponent {
   toggleCollapse(label: string) {
     label === this.currentItem ? this.currentItem = "" : this.currentItem = label;
   }
-  subMenuSelected(subMenu:any){    
+  subMenuSelected(subMenu: any) {
     this.selectedItem = subMenu.label;
   }
 }

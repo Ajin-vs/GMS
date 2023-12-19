@@ -1,9 +1,10 @@
-.side-bar{
+.side-bar {
     background-color: #1a73e8;
     color: #fff;
     height: 100vh;
     overflow-y: auto;
-    position: fixed; /* Fixed position to keep the sidebar in place */
+    position: fixed;
+    /* Fixed position to keep the sidebar in place */
     scrollbar-width: thin;
     /* margin-top: 40px; */
     /* margin-left: -11px; */
@@ -43,18 +44,18 @@
     overflow: hidden;
     opacity: 0;
     display: none;
-  }
-  
-  .shows {
+}
+
+.shows {
     height: auto;
     overflow: visible;
     opacity: 1;
     display: block;
 
-  }
+}
 
 .collapsing {
-    transition: height 0.35s ease !important; /* Add transition for the collapse effect */
- 
+    transition: height 0.35s ease !important;
+    /* Add transition for the collapse effect */
+
 }
-  
