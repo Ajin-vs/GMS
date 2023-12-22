@@ -1,9 +1,23 @@
-::ng-deep .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label, .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
-    color: #1a73e8 !important; 
+::ng-deep .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label,
+.mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+    color: #1a73e8 !important;
 }
-/* .sub-menu{
+
+.sub-menu {
     position: fixed;
-    top: 80px;
+    /* top: 80px; */
     z-index: 1000;
     display: block;
-} */
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.inner-data{
+    margin-top:80px;
+}
+
+@media screen and (max-width: 895px) {
+    .inner-data{
+        margin-top:150px;
+    }}

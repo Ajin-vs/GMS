@@ -1,0 +1,12 @@
+.tob-bar {
+    height: 79px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: dark;
+    /* Adjust the text color as needed */
+    z-index: 1000;
+    /* background-color: red; */
+    /* border: 1px solid black; */
+}
+

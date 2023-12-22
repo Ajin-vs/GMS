@@ -11,6 +11,8 @@ export class CommonService {
   screenWidth$ = this.screenWidth.asObservable();
   memberTabs:BehaviorSubject<any> = new BehaviorSubject([{label:'List', index:0, path:'memberList', icon:'list'},{label:'Add', index:1,path:'memberAdd',icon:'person_add'}]);
   attendanceTabs:BehaviorSubject<any> = new BehaviorSubject([{label:'List', index: 0},{label:'Add', index:1}]);
+  isSticky: boolean = false;
+
   constructor(private router: Router) {
     // Listen for window resize events
     window.addEventListener('resize', () => {      
@@ -20,6 +22,14 @@ export class CommonService {
 
   getCurrentScreenWidth(): number {
     return window.innerWidth;
+  }
+
+  handleScroll():Observable<any> {
+    const scrollPosition = window.scrollY;
+    console.log(scrollPosition);
+    
+    this.isSticky = scrollPosition > 0;
+    return of(this.isSticky);
   }
 
 }

@@ -8,6 +8,7 @@
     scrollbar-width: thin;
     /* margin-top: 40px; */
     /* margin-left: -11px; */
+    z-index: 1001;
 }
 .menu {
     cursor: pointer;

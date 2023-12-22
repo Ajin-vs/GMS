@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Router, NavigationStart, Event as NavigationEvent } from '@angular/router';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-navbar',
