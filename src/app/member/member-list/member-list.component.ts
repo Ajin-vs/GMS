@@ -10,7 +10,6 @@ export class MemberListComponent {
   @ViewChild(MatAccordion) accordion!: MatAccordion;
 
   ngOnInit(){
-    console.log("List");
-    
+    window.scrollTo(0, 0);    
   }
 }

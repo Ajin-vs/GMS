@@ -1,0 +1,38 @@
+:host ::ng-deep .text-field.mat-mdc-text-field-wrapper {
+    height: 48px !important;
+}
+.example-full-width {
+    width: 100%;
+  }
+
+.icon-color{
+    background-color: #1a73e8 ;
+}
+.icon-colors{
+    color: #1a73e8 ;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+
+  /* Remove the inner padding and border in Firefox */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove increment/decrement arrows in Webkit browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove increment/decrement arrows in Edge */
+input[type="number"]::-ms-inner-spin-button,
+input[type="number"]::-ms-outer-spin-button {
+  -ms-appearance: none;
+  margin: 0;
+}

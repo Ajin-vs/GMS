@@ -1,1 +1,174 @@
-<p>member-crud works!</p>
+<form class="mb-5">
+
+    <!-- PERSONAL INFO -->
+    <div class="header">
+        <p>PERSONAL INFORMATION</p>
+    </div>
+    <div class="card p-4 shadow">
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            <mat-form-field appearance="outline">
+                <mat-label>Full Name</mat-label>
+                <input matInput placeholder="" size="small">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>DOB</mat-label>
+                <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Gender</mat-label>
+                <mat-select>
+                    <mat-option value="male">Male</mat-option>
+                    <mat-option value="female">Female</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile</mat-label>
+                <input matInput placeholder="" appNumericOnly type="number">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Address</mat-label>
+                <textarea matInput placeholder=""></textarea>
+            </mat-form-field>
+        </div>
+        <div class="header">
+            <small class="text-secondary">Emergency Contact</small>
+        </div>
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-1">
+            <mat-form-field appearance="outline">
+                <mat-label>Full Name</mat-label>
+                <input matInput placeholder="" size="small">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile</mat-label>
+                <input matInput placeholder="" appNumericOnly type="number">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <!-- HEALTH AND FITNESS INFORMATION -->
+    <div class="header mt-4">
+        <p>HEALTH AND FITNESS INFORMATION</p>
+    </div>
+    <div class="card p-4 shadow">
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            <mat-form-field appearance="outline">
+                <mat-label>Height</mat-label>
+                <input matInput placeholder="" appUnit>
+                <span matSuffix class="p-2">CM </span>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Weight</mat-label>
+                <input matInput placeholder="" appUnit>
+                <span matSuffix class="p-2">KG </span>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Medical history</mat-label>
+                <textarea matInput placeholder=""></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <!-- Membership Details -->
+    <div class="header mt-4">
+        <p>MEMBERSHIP DETAILS
+        </p>
+    </div>
+    <div class="card p-4 shadow">
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            <mat-form-field appearance="outline">
+                <mat-label>Membership Type</mat-label>
+                <mat-select>
+                    <mat-option value="monthly">Monthly</mat-option>
+                    <mat-option value="quarterly">Quarterly</mat-option>
+                    <mat-option value="yearly">Yearly</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <!-- <mat-form-field appearance="outline">
+                <mat-label>Dues Frequency</mat-label>
+                <input matInput placeholder="" size="small" disabled value="0">
+            </mat-form-field> -->
+            <mat-form-field appearance="outline">
+                <mat-label>Fees</mat-label>
+                <input matInput placeholder="" size="small" disabled value="0">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Start Date</mat-label>
+                <input matInput [matDatepicker]="picker4" placeholder="MM/DD/YYYY">
+                <mat-datepicker-toggle matIconSuffix [for]="picker4"></mat-datepicker-toggle>
+                <mat-datepicker #picker4></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Validity Date</mat-label>
+                <input matInput [matDatepicker]="picker5" placeholder="MM/DD/YYYY" disabled>
+                <mat-datepicker-toggle matIconSuffix [for]="picker5"></mat-datepicker-toggle>
+                <mat-datepicker #picker5></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <!-- Fees Information -->
+    <div class="header mt-4 ">
+        <p class="d-flex justify-content-between">FEES DETAILS
+            <button mat-mini-fab class="icon-color" (click)="openModal()">
+                <i class="material-icons dispaly-5"  >add</i>
+            </button>
+        </p>
+    </div>
+    <div class="card  shadow" style="padding: 1px;">
+        <!-- for this need to keep a extra membership type column in the db because if the membership type of a user is changed will loose the fees details -->
+        <!-- <div class="row row-cols-4 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            <mat-form-field appearance="outline">
+                <mat-label>Fees Type</mat-label>
+                <mat-select>
+                    <mat-option value="admission">Admission</mat-option>
+                    <mat-option value="membership">Membership</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Payable</mat-label>
+                <input matInput placeholder="" size="small" disabled value="0">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Discount</mat-label>
+                <input matInput placeholder="" size="small"  value="0" appNumericOnly>
+                <span matSuffix class="p-2"> % </span>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Paid</mat-label>
+                <input matInput placeholder="" size="small"  value="0" appNumericOnly>
+            </mat-form-field>
+        </div> -->
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Mo.</th>
+                <th scope="col">Fees Type</th>
+                <th scope="col">Payable</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Paid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jan</td>
+                <td scope="row">Admission</td>
+                <td>10000</td>
+                <td>10000</td>
+                <td>15000 <small class="bold ms-1 icon-colors"><td><i class="material-icons small">arrow_forward_ios</i></small> </td>
+                <!-- <td><i class="material-icons small">chevron_right</i></td> -->
+              </tr>
+              <tr>
+                <td>Feb</td>
+                <td scope="row">Membership</td>
+                <td>10000</td>
+                <td>10000</td>
+                <td>15000 <small class="bold ms-1 icon-colors"><td><i class="material-icons small">arrow_forward_ios</i></small></td>
+                <!-- <td><i class="material-icons ">manage_history</i></td> -->
+
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</form>
