@@ -1,12 +1,12 @@
-.modal-dialog {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-  }
+::ng-deep .cdk-overlay-container{
+  z-index: 10000
+}
 
-  .modal-content {
-    max-height: 80vh; /* Set your desired maximum height */
-    overflow-y: auto; /* Add vertical scrollbar if needed */
-  }
+.icon-color{
+  background-color: red ;
+}
+
+.btn{
+  background-color: #174ea6 !important;
+  color: #fff !important;
+}

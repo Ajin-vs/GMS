@@ -55,12 +55,13 @@
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
             <mat-form-field appearance="outline">
                 <mat-label>Height</mat-label>
-                <input matInput placeholder="" appUnit>
+                <input matInput placeholder="" type="number">
                 <span matSuffix class="p-2">CM </span>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Weight</mat-label>
-                <input matInput placeholder="" appUnit>
+                <input matInput placeholder="" type="number
+                ">
                 <span matSuffix class="p-2">KG </span>
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="outline">
@@ -94,7 +95,7 @@
                 <input matInput placeholder="" size="small" disabled value="0">
             </mat-form-field>
             <mat-form-field appearance="outline">
-                <mat-label>Start Date</mat-label>
+                <mat-label>Join Date</mat-label>
                 <input matInput [matDatepicker]="picker4" placeholder="MM/DD/YYYY">
                 <mat-datepicker-toggle matIconSuffix [for]="picker4"></mat-datepicker-toggle>
                 <mat-datepicker #picker4></mat-datepicker>
@@ -168,7 +169,10 @@
                 <!-- <td><i class="material-icons ">manage_history</i></td> -->
 
               </tr>
+              
             </tbody>
           </table>
     </div>
+    <button mat-raised-button  class="float-end btn">Save</button>
+
 </form>

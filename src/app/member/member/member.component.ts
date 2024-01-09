@@ -68,4 +68,8 @@ export class MemberComponent {
         break;
     }    
   }
+  swipeLeft(){
+    console.log("lef");
+    
+  }
 }

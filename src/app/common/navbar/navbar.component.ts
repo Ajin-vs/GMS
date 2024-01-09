@@ -114,6 +114,24 @@ export class NavbarComponent {
             icon: 'pi pi-fw pi-bookmark',
           }
         ]
+      },
+      {
+        label: 'Configuration',
+        icon: 'fa-gear',
+        items: [
+          {
+            label: 'Attendance Report',
+            icon: 'pi pi-fw pi-bookmark',
+          },
+          {
+            label: 'Student Report',
+            icon: 'pi pi-fw pi-bookmark',
+          },
+          {
+            label: 'Teacher Report',
+            icon: 'pi pi-fw pi-bookmark',
+          }
+        ]
       }
     ]
 
