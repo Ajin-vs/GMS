@@ -1,20 +1,23 @@
 :host ::ng-deep .text-field.mat-mdc-text-field-wrapper {
     height: 48px !important;
 }
+
 .example-full-width {
     width: 100%;
-  }
-
-.icon-color{
-    background-color: #174ea6 ;
-}
-.icon-colors{
-    color: #1a73e8 ;
 }
 
-.btn{
+.icon-color {
+    background-color: #174ea6;
+}
+
+.icon-colors {
+    color: #1a73e8;
+}
+
+.btn {
     background-color: #174ea6 !important;
     color: #fff !important;
     margin-top: 10px;
-    padding: 10px !important;
-  }
+    padding: 22px !important;
+}
+

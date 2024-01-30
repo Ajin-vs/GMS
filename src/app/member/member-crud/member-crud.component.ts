@@ -20,7 +20,7 @@ export class MemberCrudComponent {
   }
 
   openModal(): void {    
-    const modalRef = this.modalService.open(FeesPopUpComponent, { centered: true, backdrop: true }) ;
+    const modalRef = this.modalService.open(FeesPopUpComponent, { centered: true, backdrop: 'static', size:'lg' }) ;
     modalRef.componentInstance.title = 'Modal Title';
     modalRef.componentInstance.content = 'This is the content of the modal.';
     modalRef.componentInstance.saveFees = this.saveFees.bind(this);

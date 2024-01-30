@@ -120,16 +120,9 @@ export class NavbarComponent {
         icon: 'fa-gear',
         items: [
           {
-            label: 'Attendance Report',
+            label: 'Membership Type',
             icon: 'pi pi-fw pi-bookmark',
-          },
-          {
-            label: 'Student Report',
-            icon: 'pi pi-fw pi-bookmark',
-          },
-          {
-            label: 'Teacher Report',
-            icon: 'pi pi-fw pi-bookmark',
+            path: 'configuration/membershipType'
           }
         ]
       }

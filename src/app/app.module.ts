@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
+import { MembershipTypeComponent } from './configuration/membership-type/membership-type.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     MobileNavbarComponent,
     DashboardComponent,
-    TopbarComponent
+    TopbarComponent,
+    MembershipTypeComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { DashboardComponent } from './common/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path: 'member', loadChildren: () => import('./member/member.module').then(m => m.MemberModule) },
+  {path:'configuration', loadChildren: ()=> import('./configuration/configuration.module').then(m => m.ConfigurationModule)},
   {path:'dashboard', component:DashboardComponent},
   // { path: '**', component: TestComponent },
   

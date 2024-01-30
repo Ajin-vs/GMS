@@ -11,7 +11,7 @@ export class CommonService {
 
   screenWidth$ = this.screenWidth.asObservable();
   memberTabs:BehaviorSubject<any> = new BehaviorSubject([{label:'List', index:0, path:'memberList', icon:'list'},{label:'Add', index:1,path:'memberAdd',icon:'person_add'}]);
-  attendanceTabs:BehaviorSubject<any> = new BehaviorSubject([{label:'List', index: 0},{label:'Add', index:1}]);
+  configurationTabs:BehaviorSubject<any> = new BehaviorSubject([{label:'List', index: 0, path:'membershipList', icon:'list'},{label:'Add', index:1, path:'membershipType', icon:'person_add'}]);
   isSticky: boolean = false;
 
   constructor(private router: Router, private httpClient : HttpClient) {
@@ -33,6 +33,6 @@ export class CommonService {
   }
 
   public memberList():Observable<any>{
-    return this.httpClient.get(`http://192.168.1.35:8000/api/member/list_member/1`);
+    return this.httpClient.get(`http://192.168.1.35:/api/member/list_member/1`);
   }
 }
