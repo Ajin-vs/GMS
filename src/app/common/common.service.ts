@@ -11,12 +11,12 @@ export class CommonService {
 
   screenWidth$ = this.screenWidth.asObservable();
   memberTabs:BehaviorSubject<any> = new BehaviorSubject([{label:'List', index:0, path:'memberList', icon:'list'},{label:'Add', index:1,path:'memberAdd',icon:'person_add'}]);
-  configurationTabs:BehaviorSubject<any> = new BehaviorSubject([{label:'List', index: 0, path:'membershipList', icon:'list'},{label:'Add', index:1, path:'membershipType', icon:'person_add'}]);
+  configurationTabs:BehaviorSubject<any> = new BehaviorSubject([{label:'List', index: 0, path:'subscriptionList', icon:'list'},{label:'Add', index:1, path:'subscriptionType', icon:'playlist_add'}]);
   isSticky: boolean = false;
 
   constructor(private router: Router, private httpClient : HttpClient) {
     // Listen for window resize events
-    window.addEventListener('resize', () => {      
+    window.addEventListener('resize', () => {   
       this.screenWidth.next(window.innerWidth);
     });
   }

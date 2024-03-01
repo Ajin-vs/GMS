@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FeesPopUpComponent } from '../fees-pop-up/fees-pop-up.component';
 import { CommonService } from 'src/app/common/common.service';
@@ -10,24 +10,24 @@ import { CommonService } from 'src/app/common/common.service';
   styleUrls: ['./member-crud.component.css']
 })
 export class MemberCrudComponent {
-  constructor(private router: Router, private modalService: NgbModal, private commonService : CommonService) { }
+  constructor(private router: Router, private modalService: NgbModal, private commonService: CommonService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     window.scrollTo(0, 0);
- this.commonService.memberList().subscribe(res=>{
-  
- })
+    this.commonService.memberList().subscribe(res => {
+
+    })
   }
 
-  openModal(): void {    
-    const modalRef = this.modalService.open(FeesPopUpComponent, { centered: true, backdrop: 'static', size:'lg' }) ;
+  openModal(): void {
+    const modalRef = this.modalService.open(FeesPopUpComponent, { centered: true, backdrop: 'static', size: 'lg' });
     modalRef.componentInstance.title = 'Modal Title';
     modalRef.componentInstance.content = 'This is the content of the modal.';
     modalRef.componentInstance.saveFees = this.saveFees.bind(this);
   }
 
-  saveFees(){
+  saveFees() {
     console.log("save fees");
-    
+
   }
 }

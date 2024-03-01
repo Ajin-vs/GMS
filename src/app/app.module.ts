@@ -15,6 +15,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import { MembershipTypeComponent } from './configuration/membership-type/membership-type.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MembershipTypeComponent } from './configuration/membership-type/members
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

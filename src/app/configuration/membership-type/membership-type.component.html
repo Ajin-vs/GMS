@@ -1,1 +1,36 @@
-<p>membership-type works!</p>
+<form class="mb-5">
+
+    <!-- SUBSCRIPTION INFO -->
+    <div class="header">
+        <p>SUBSCRIPTION INFORMATION</p>
+    </div>
+    <div class="card p-4 shadow">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Subscription Type</mat-label>
+                <input matInput placeholder="" size="small">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Subscription Period (Months)</mat-label>
+                <input matInput placeholder="" appNumericOnly type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Amount</mat-label>
+                <input matInput placeholder="" appNumericOnly type="number">
+                <span matSuffix class="p-2">₹ </span>
+            </mat-form-field>
+        </div>
+    </div>
+
+  
+  
+    <div class="header mt-4 ">
+        <p class="d-flex justify-content-end">
+            <button mat-raised-button  class="btn">Save</button>
+        </p>
+    </div>
+    <!-- <div class="header">
+        <button mat-raised-button  class="float-end btn">Save</button>
+    </div> -->
+
+</form>

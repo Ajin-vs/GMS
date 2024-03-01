@@ -24,6 +24,8 @@
 
 .sub-menu-hover {
     transition: background-color 0.3s linear, color 0.3s linear, border-radius 0.3s linear;
+    width: 100vmax;
+
 }
 
 .sub-menu-hover:hover {

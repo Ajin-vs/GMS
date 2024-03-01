@@ -14,11 +14,14 @@ import { SharedModule } from '../common/shared.module';
 import { MatButtonModule } from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MemeberShipListComponent } from './memeber-ship-list/memeber-ship-list.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
   declarations: [
-    ConfigurationComponent
+    ConfigurationComponent,
+    MemeberShipListComponent
   ],
   imports: [
     CommonModule,
@@ -33,8 +36,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     SharedModule,
     MatButtonModule,
     NgbModule,
-    MatDialogModule
-
+    MatDialogModule,
+    MatCardModule,
+    MatInputModule
   ]
 })
 export class ConfigurationModule { }

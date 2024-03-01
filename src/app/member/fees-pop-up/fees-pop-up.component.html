@@ -20,6 +20,16 @@
             </mat-select>
           </mat-form-field>
           <mat-form-field appearance="outline">
+            <mat-label>Membership Type</mat-label>
+            <input matInput placeholder=""  disabled>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" disabled>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>Payable</mat-label>
             <input matInput placeholder="" appNumericOnly type="number" disabled>
             <span matSuffix class="p-2">₹ </span>
@@ -43,7 +53,10 @@
           </mat-form-field>
         </div>
       </form>
-      <button mat-raised-button (click)="saveFee()" class="float-end btn">Save</button>
+      <!-- The use of ignore button is to avoid a specific month fee of a memebers && button will activate if some one is unpaid and in update fees -->
+      <button mat-raised-button  class="float-end btn" >Ignore</button>
+      <button mat-raised-button (click)="saveFee()" class="float-end btn me-3">Save</button>
+      
     </div>
   </div>
 </div>

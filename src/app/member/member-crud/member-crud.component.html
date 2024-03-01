@@ -95,7 +95,7 @@
                 <input matInput placeholder="" size="small" disabled value="0">
             </mat-form-field>
             <mat-form-field appearance="outline">
-                <mat-label>Join Date</mat-label>
+                <mat-label>Start Date</mat-label>
                 <input matInput [matDatepicker]="picker4" placeholder="MM/DD/YYYY">
                 <mat-datepicker-toggle matIconSuffix [for]="picker4"></mat-datepicker-toggle>
                 <mat-datepicker #picker4></mat-datepicker>
@@ -152,22 +152,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr (click)="openModal()">
                 <td>Jan</td>
                 <td scope="row">Admission</td>
                 <td>10000</td>
                 <td>10000</td>
                 <td>15000 <small class="bold ms-1 icon-colors"><td><i class="material-icons small">arrow_forward_ios</i></small> </td>
                 <!-- <td><i class="material-icons small">chevron_right</i></td> -->
-              </tr>
-              <tr>
-                <td>Feb</td>
-                <td scope="row">Membership</td>
-                <td>10000</td>
-                <td>10000</td>
-                <td>15000 <small class="bold ms-1 icon-colors"><td><i class="material-icons small">arrow_forward_ios</i></small></td>
-                <!-- <td><i class="material-icons ">manage_history</i></td> -->
-
               </tr>
               
             </tbody>

@@ -1,12 +1,6 @@
 <div class="sub-menu" [@navAnimation]="isSticky ? 'show' : 'hide'">
-    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" (selectedTabChange)="tabChanged($event)" [selectedIndex]="selectedTabIndex" class="mb-2">
-        <mat-tab *ngFor="let tab of tabs" class="text-danger">
-            <ng-template mat-tab-label >
-                <i class="material-icons me-1">{{tab?.icon}}</i>
-                {{tab.label}}
-            </ng-template>   
-         </mat-tab>
-    </mat-tab-group>
+    <app-tab [tabs]="tabs" (tabChanges)="tabChanges($event)"></app-tab>
+
 </div>
 <div class="inner-data " >
     <router-outlet></router-outlet>

@@ -50,11 +50,9 @@ export class NavbarComponent {
         .subscribe(
           (event: NavigationEvent) => {
             if (event instanceof NavigationStart) {
-              // console.log(event.url);
               const split = event.url.split('/')[1];
-
               this.currentItem = split.charAt(0).toUpperCase() + split.slice(1) ? split.charAt(0).toUpperCase() + split.slice(1) : 'Dashboard';
-              this.selectedItem = split.charAt(0).toUpperCase() + split.slice(1) ? split.charAt(0).toUpperCase() + split.slice(1) : 'Dashboard';
+              this.selectedItem = split.charAt(0).toUpperCase() + split.slice(1) ? split.charAt(0).toUpperCase() + split.slice(1) : 'Dashboard';             
               if (event.url.includes('dashboard')) {
                 this.currentItem = 'Dashboard'
                 this.selectedItem = 'Dashboard'
@@ -98,6 +96,22 @@ export class NavbarComponent {
         ]
       },
       {
+        label: 'Configuration',
+        icon: 'fa-gear',
+        items: [
+          {
+            label: 'Subscription List',
+            icon: 'pi pi-fw pi-bookmark',
+            path: 'configuration/subscriptionList'
+          },
+          {
+            label: 'Subscription Type',
+            icon: 'pi pi-fw pi-bookmark',
+            path: 'configuration/subscriptionType'
+          }
+        ]
+      },
+      {
         label: 'Report',
         icon: 'fa-magnifying-glass-chart',
         items: [
@@ -114,17 +128,6 @@ export class NavbarComponent {
             icon: 'pi pi-fw pi-bookmark',
           }
         ]
-      },
-      {
-        label: 'Configuration',
-        icon: 'fa-gear',
-        items: [
-          {
-            label: 'Membership Type',
-            icon: 'pi pi-fw pi-bookmark',
-            path: 'configuration/membershipType'
-          }
-        ]
       }
     ]
 
@@ -138,4 +141,5 @@ export class NavbarComponent {
   subMenuSelected(subMenu: any) {
     this.selectedItem = subMenu.label;
   }
+
 }

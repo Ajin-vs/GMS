@@ -33,19 +33,7 @@ export class MemberComponent {
 
   ngOnInit(){
     this.commonService.memberTabs.subscribe(tabs=> {this.tabs = tabs  
-        let currentRoute = this.router.url.split('/')[2];
-        let initialIndex = this.tabs.findIndex((tab: any) => tab?.path == currentRoute);
-        this.selectedTabIndex = initialIndex;
      });
-     this.router.events
-     .subscribe(
-       (event: NavigationEvent) => {
-         if (event instanceof NavigationStart) {
-           const currentRoute = event.url.split('/')[2];
-           let initialIndex =this.tabs.findIndex((tab:any)=>tab?.path == currentRoute);
-           this.selectedTabIndex = initialIndex;
-         }
-       }); 
     if(this.isUpdate){
       this.tabs.push({label:'Update', index:1,path:'memberAdd',icon:'edit'});
     }
@@ -53,12 +41,11 @@ export class MemberComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.commonService.handleScroll().subscribe(res=> {this.isSticky = res
-    console.log(res);
     });
   }
   // Add a method to handle tab changes
-  tabChanged(event: any) {
-    this.selectedTabIndex = event.index;
+  tabChanges(event: any) {    
+    this.selectedTabIndex = event.index;    
     switch (this.selectedTabIndex) {
       case 0:  this.router.navigateByUrl('member/memberList');
         break;
